@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ru"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интерактивный чек-лист</title>
   <style>
     :root{
@@ -112,7 +110,329 @@
     <section class="section">
       <h2>Основные категории</h2>
       <p class="lead">Пройдите пункты последовательно. Итоговый результат появится ниже автоматически.</p>
-      <div class="grid" id="checklist"></div>
+      <div class="grid" id="checklist"><div class="cat"><h3>1. Назначение рабочего места</h3><p class="subtitle">Соответствует ли конфигурация реальным задачам пользователя.</p><div class="item">
+      <div class="txt">Понятно, для каких задач предназначено рабочее место: учёба, документооборот, аналитика, проектная работа, графика, видеосвязь, программирование.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_0" value="0">0</label>
+        <label><input type="radio" name="item_0" value="1">1</label>
+        <label><input type="radio" name="item_0" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Подбор техники соответствует этим задачам, а не принципу «чем мощнее, тем лучше».</div>
+      <div class="scale">
+        <label><input type="radio" name="item_1" value="0">0</label>
+        <label><input type="radio" name="item_1" value="1">1</label>
+        <label><input type="radio" name="item_1" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Рабочее место не перегружено лишними устройствами, которые фактически не используются.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_2" value="0">0</label>
+        <label><input type="radio" name="item_2" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_2" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Конфигурация допускает разумный запас по производительности на ближайшую перспективу.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_3" value="0">0</label>
+        <label><input type="radio" name="item_3" value="1">1</label>
+        <label><input type="radio" name="item_3" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>2. Пространство и компоновка</h3><p class="subtitle">Насколько рационально организовано пространство и размещено оборудование.</p><div class="item">
+      <div class="txt">Стол и рабочая поверхность достаточны по размеру для техники и комфортной работы.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_4" value="0">0</label>
+        <label><input type="radio" name="item_4" value="1">1</label>
+        <label><input type="radio" name="item_4" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Оборудование размещено так, чтобы не мешать движениям и доступу к основным предметам.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_5" value="0">0</label>
+        <label><input type="radio" name="item_5" value="1">1</label>
+        <label><input type="radio" name="item_5" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Провода не создают беспорядка, не мешают работе и не формируют опасных зон.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_6" value="0">0</label>
+        <label><input type="radio" name="item_6" value="1">1</label>
+        <label><input type="radio" name="item_6" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Розетки, удлинители и блоки питания расположены безопасно и удобно.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_7" value="0">0</label>
+        <label><input type="radio" name="item_7" value="1">1</label>
+        <label><input type="radio" name="item_7" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">В рабочей зоне нет помех для вентиляции техники и свободного доступа к оборудованию.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_8" value="0">0</label>
+        <label><input type="radio" name="item_8" value="1">1</label>
+        <label><input type="radio" name="item_8" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>3. Эргономика</h3><p class="subtitle">Оценка посадки, положения монитора и условий длительной работы.</p><div class="item">
+      <div class="txt">Высота стола и посадка позволяют работать без постоянного напряжения спины и плеч.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_9" value="0">0</label>
+        <label><input type="radio" name="item_9" value="1">1</label>
+        <label><input type="radio" name="item_9" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Монитор расположен на комфортной высоте: верхняя часть экрана примерно на уровне глаз или немного ниже.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_10" value="0">0</label>
+        <label><input type="radio" name="item_10" value="1">1</label>
+        <label><input type="radio" name="item_10" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Расстояние до экрана достаточное для устойчивой и ненапряжённой работы.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_11" value="0">0</label>
+        <label><input type="radio" name="item_11" value="1">1</label>
+        <label><input type="radio" name="item_11" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Клавиатура и мышь размещены так, чтобы руки не были постоянно подняты или изогнуты.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_12" value="0">0</label>
+        <label><input type="radio" name="item_12" value="1">1</label>
+        <label><input type="radio" name="item_12" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Освещение не создаёт сильных бликов на экране и не мешает восприятию изображения.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_13" value="0">0</label>
+        <label><input type="radio" name="item_13" value="1">1</label>
+        <label><input type="radio" name="item_13" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Рабочее место допускает длительную работу без выраженного дискомфорта.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_14" value="0">0</label>
+        <label><input type="radio" name="item_14" value="1">1</label>
+        <label><input type="radio" name="item_14" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>4. Экран и визуальная нагрузка</h3><p class="subtitle">Соответствие монитора задачам и условиям восприятия.</p><div class="item">
+      <div class="txt">Размер экрана соответствует задачам пользователя.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_15" value="0">0</label>
+        <label><input type="radio" name="item_15" value="1">1</label>
+        <label><input type="radio" name="item_15" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Разрешение экрана достаточно для комфортной работы с документами, таблицами и интерфейсами.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_16" value="0">0</label>
+        <label><input type="radio" name="item_16" value="1">1</label>
+        <label><input type="radio" name="item_16" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Яркость и качество изображения позволяют работать без избыточного напряжения зрения.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_17" value="0">0</label>
+        <label><input type="radio" name="item_17" value="1">1</label>
+        <label><input type="radio" name="item_17" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Монитор установлен устойчиво и не занимает пространство нерационально.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_18" value="0">0</label>
+        <label><input type="radio" name="item_18" value="1">1</label>
+        <label><input type="radio" name="item_18" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">При необходимости предусмотрен второй экран или возможность его подключения.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_19" value="0" checked="checked">0</label>
+        <label><input type="radio" name="item_19" value="1">1</label>
+        <label><input type="radio" name="item_19" value="2">2</label>
+      </div>
+    </div></div><div class="cat"><h3>5. Форм-фактор и тип техники</h3><p class="subtitle">Насколько выбранная форма техники соответствует сценарию использования.</p><div class="item">
+      <div class="txt">Форм-фактор устройства соответствует условиям использования: настольный ПК, ноутбук, моноблок, мини-ПК.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_20" value="0">0</label>
+        <label><input type="radio" name="item_20" value="1">1</label>
+        <label><input type="radio" name="item_20" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Выбранная форма техники оправдана задачами, а не только внешним удобством.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_21" value="0">0</label>
+        <label><input type="radio" name="item_21" value="1">1</label>
+        <label><input type="radio" name="item_21" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">При необходимости модернизации выбран вариант, который допускает обслуживание и замену компонентов.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_22" value="0">0</label>
+        <label><input type="radio" name="item_22" value="1">1</label>
+        <label><input type="radio" name="item_22" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Для стационарного рабочего места техника не теряет в удобстве из-за чрезмерной компактности.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_23" value="0">0</label>
+        <label><input type="radio" name="item_23" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_23" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Для мобильной работы не используется избыточно громоздкая конфигурация.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_24" value="0">0</label>
+        <label><input type="radio" name="item_24" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_24" value="2">2</label>
+      </div>
+    </div></div><div class="cat"><h3>6. Оперативная память</h3><p class="subtitle">Соответствие ОЗУ реальной нагрузке рабочего места.</p><div class="item">
+      <div class="txt">Объём оперативной памяти соответствует числу одновременно используемых программ.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_25" value="0">0</label>
+        <label><input type="radio" name="item_25" value="1">1</label>
+        <label><input type="radio" name="item_25" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Конфигурация памяти подходит под рабочую нагрузку: браузер, документы, видеосвязь, аналитика, специализированные программы.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_26" value="0">0</label>
+        <label><input type="radio" name="item_26" value="1">1</label>
+        <label><input type="radio" name="item_26" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Нет признаков того, что системе регулярно не хватает ОЗУ: зависания, медленное переключение между задачами, просадки при открытии файлов.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_27" value="0">0</label>
+        <label><input type="radio" name="item_27" value="1">1</label>
+        <label><input type="radio" name="item_27" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Память подобрана не по минимальному порогу запуска системы, а по реальному сценарию работы.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_28" value="0">0</label>
+        <label><input type="radio" name="item_28" value="1">1</label>
+        <label><input type="radio" name="item_28" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Для многозадачной среды предусмотрен разумный запас по ОЗУ.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_29" value="0">0</label>
+        <label><input type="radio" name="item_29" value="1">1</label>
+        <label><input type="radio" name="item_29" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>7. Накопители данных</h3><p class="subtitle">Оценка скорости, объёма и логики хранения данных.</p><div class="item">
+      <div class="txt">Системный накопитель достаточно быстр для запуска операционной системы и приложений.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_30" value="0">0</label>
+        <label><input type="radio" name="item_30" value="1">1</label>
+        <label><input type="radio" name="item_30" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Объём накопителя соответствует реальному объёму рабочих данных.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_31" value="0">0</label>
+        <label><input type="radio" name="item_31" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_31" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Хранилище выбрано по задаче: скорость, ёмкость, надёжность, бюджет.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_32" value="0">0</label>
+        <label><input type="radio" name="item_32" value="1">1</label>
+        <label><input type="radio" name="item_32" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">В конфигурации учтено различие между рабочим накопителем и архивным хранением.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_33" value="0">0</label>
+        <label><input type="radio" name="item_33" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_33" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">При необходимости предусмотрена логика резервирования или внешнего хранения данных.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_34" value="0">0</label>
+        <label><input type="radio" name="item_34" value="1">1</label>
+        <label><input type="radio" name="item_34" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>8. Надёжность, обслуживание, срок службы</h3><p class="subtitle">Оценка устойчивости системы в реальной эксплуатации.</p><div class="item">
+      <div class="txt">Техника не перегревается в условиях реального использования.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_35" value="0">0</label>
+        <label><input type="radio" name="item_35" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_35" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Корпус, форм-фактор и размещение не затрудняют вентиляцию.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_36" value="0">0</label>
+        <label><input type="radio" name="item_36" value="1">1</label>
+        <label><input type="radio" name="item_36" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Есть возможность очистки, обслуживания и замены ключевых компонентов.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_37" value="0">0</label>
+        <label><input type="radio" name="item_37" value="1">1</label>
+        <label><input type="radio" name="item_37" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Компоновка не приводит к ускоренному износу техники из-за пыли, перегрева или вибраций.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_38" value="0">0</label>
+        <label><input type="radio" name="item_38" value="1">1</label>
+        <label><input type="radio" name="item_38" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Рабочее место допускает безопасную и длительную эксплуатацию.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_39" value="0">0</label>
+        <label><input type="radio" name="item_39" value="1">1</label>
+        <label><input type="radio" name="item_39" value="2" checked="checked">2</label>
+      </div>
+    </div></div><div class="cat"><h3>9. Логика закупки для организации</h3><p class="subtitle">Оценка техники с точки зрения управленческого решения.</p><div class="item">
+      <div class="txt">Конфигурация соответствует реальной категории сотрудников, а не усреднённому шаблону «для всех одинаково».</div>
+      <div class="scale">
+        <label><input type="radio" name="item_40" value="0">0</label>
+        <label><input type="radio" name="item_40" value="1">1</label>
+        <label><input type="radio" name="item_40" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Баланс между ценой и производительностью выглядит обоснованным.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_41" value="0">0</label>
+        <label><input type="radio" name="item_41" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_41" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Нет явной переплаты за характеристики, которые не будут использоваться.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_42" value="0">0</label>
+        <label><input type="radio" name="item_42" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_42" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Нет чрезмерной экономии на компонентах, влияющих на повседневную эффективность.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_43" value="0">0</label>
+        <label><input type="radio" name="item_43" value="1">1</label>
+        <label><input type="radio" name="item_43" value="2" checked="checked">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Выбранная конфигурация подходит для массового обслуживания, эксплуатации и обновления.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_44" value="0">0</label>
+        <label><input type="radio" name="item_44" value="1" checked="checked">1</label>
+        <label><input type="radio" name="item_44" value="2">2</label>
+      </div>
+    </div><div class="item">
+      <div class="txt">Закупка учитывает не только стартовую цену, но и удобство работы, срок службы и перспективу модернизации.</div>
+      <div class="scale">
+        <label><input type="radio" name="item_45" value="0">0</label>
+        <label><input type="radio" name="item_45" value="1">1</label>
+        <label><input type="radio" name="item_45" value="2" checked="checked">2</label>
+      </div>
+    </div></div></div>
     </section>
 
     <section class="section" id="result">
@@ -120,36 +440,42 @@
       <div class="summary">
         <div class="sum-card">
           <strong>Набрано баллов</strong>
-          <div class="big" id="sum">0</div>
+          <div class="big" id="sum">81</div>
         </div>
         <div class="sum-card">
           <strong>Максимум</strong>
-          <div class="big" id="max">0</div>
+          <div class="big" id="max">92</div>
         </div>
         <div class="sum-card">
           <strong>Процент</strong>
-          <div class="big" id="percent">0%</div>
+          <div class="big" id="percent">88%</div>
         </div>
         <div class="sum-card">
           <strong>Результат</strong>
-          <div id="bandWrap" style="margin-top:8px;"></div>
+          <div id="bandWrap" style="margin-top:8px;"><div class="band good">Рабочее место организовано грамотно и соответствует задачам</div></div>
         </div>
       </div>
 
       <div class="cols" style="margin-top:16px;">
         <div>
           <h3>Три сильные стороны</h3>
-          <textarea id="strengths" placeholder="Например: удачное расположение монитора, достаточная оперативная память, хорошая кабельная организация."></textarea>
+          <textarea id="strengths" placeholder="Например: удачное расположение монитора, достаточная оперативная память, хорошая кабельная организация." style="height: 174px;">1. Достаточная площадь рабочего стола и удобное расположение монитора и других необходимых устройств.  
+2. Процессор справляется с типовыми задачами без зависаний.  
+3. Мобильность устройства и возможность работать автономно, без розетки.</textarea>
         </div>
         <div>
           <h3>Три проблемные зоны</h3>
-          <textarea id="problems" placeholder="Например: нехватка пространства, плохое освещение, неудобное расположение клавиатуры."></textarea>
+          <textarea id="problems" placeholder="Например: нехватка пространства, плохое освещение, неудобное расположение клавиатуры.">1. Ноутбук греется при длительной нагрузке, вентилятор шумит.  
+2. Системный диск С почти заполнен, что может замедлять работу системы и ограничивать установку программ.  
+3. После падения корпус ноутбука изогнут, из-за чего на экране появились засветы (особенно заметно на чёрном фоне). Это иногда мешает комфортной работе.</textarea>
         </div>
       </div>
 
       <div style="margin-top:14px;">
         <h3>Три улучшения с наибольшим эффектом</h3>
-        <textarea id="improvements" placeholder="Например: поднять монитор, добавить быстрый SSD, организовать кабели, улучшить освещение."></textarea>
+        <textarea id="improvements" placeholder="Например: поднять монитор, добавить быстрый SSD, организовать кабели, улучшить освещение.">1. Улучшить охлаждение ноутбука – приподнять корпус с помощью подставки, книг или специальных ножек-липучек (стоят ~100–200 руб). Это обеспечит циркуляцию воздуха под днищем, снизит температуру и уменьшит частоту включения вентилятора, а также шум при длительной нагрузке.  
+2. Освободить место на диске C – провести очистку временных файлов, отключить гибернацию, перенести папки «Документы» и «Загрузки» на диск D или внешний накопитель. В долгосрочной перспективе заменить внутренний SSD на более ёмкий (от 512 ГБ), что ускорит работу системы и снизит ограничения на установку программ.  
+3. Отремонтировать корпус ноутбука в сервисном центре – из-за деформации после падения на экране появились засветы (на чёрном фоне). Замена или восстановление корпуса устранит перекос матрицы и нормализует качество изображения. Ориентировочная стоимость 2000–5000 руб.</textarea>
       </div>
 
       <div class="actions">
@@ -350,8 +676,9 @@ document.getElementById('saveBtn').addEventListener('click', () => {
 ['strengths','problems','improvements'].forEach(id => {
   document.getElementById(id).addEventListener('input', saveAll);
 });
-loadAll();
+//loadAll();
 updateSummary();
 </script>
-</body>
-</html>
+
+
+</body></html>
