@@ -6,6 +6,16 @@
   <title>Шаблон отчёта студента</title>
   <style>
     :root{
+      .band{
+  padding:12px 14px;
+  border-radius:16px;
+  font-weight:700;
+}
+.band.good{
+  background:#ecfdf5;
+  color:#0f766e;
+  border:1px solid #bbf7d0;
+}
       --bg:#f4f7fc; --card:#ffffff; --text:#18212f; --muted:#5f6b7a; --line:#dde6f0;
       --primary:#2457d6; --primary2:#4f86ff; --soft:#ecf3ff; --green:#0f766e; --warn:#9a6700;
       --shadow:0 14px 36px rgba(24,33,47,.10); --radius:22px;
@@ -92,11 +102,12 @@
       <div class="summary">
         <div class="sum-card"><strong>Набрано баллов</strong><div class="big" id="sum">81</div></div>
         <div class="sum-card"><strong>Максимум</strong><div class="big" id="max">92</div></div>
-        <div class="sum-card"><strong>Процент</strong><div class="big" id="percent">88%</div></div>
-        <div id="interp" style="margin-top:8px; background:#ecfdf5; color:#0f766e; border:1px solid #bbf7d0; padding:12px 14px; border-radius:16px; font-weight:700; text-align:center;">
-  Рабочее место организовано грамотно и соответствует задачам
+        <div class="sum-card">
+  <strong>Результат</strong>
+  <div id="interp" style="margin-top:8px;">
+    <div class="band good">Рабочее место организовано грамотно и соответствует задачам</div>
+  </div>
 </div>
-      </div>
     </section>
 
     <section class="section">
