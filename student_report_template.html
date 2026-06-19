@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Шаблон отчёта студента</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+    
     :root {
       --bg: #fdfaf3;
       --card: #ffffff;
@@ -32,7 +34,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;
+      font-family: 'Nunito', Inter, "Segoe UI", Roboto, Arial, sans-serif;
       color:var(--text);
       background: #fdfaf3;
       line-height:1.58;
@@ -44,6 +46,26 @@
       border-radius:28px;
       padding:28px 26px;
       box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"♥";
+      position:absolute;
+      right:30px;
+      bottom:20px;
+      font-size:180px;
+      color:rgba(255,255,255,.10);
+      line-height:1;
+    }
+    .hero:after{
+      content:"♥";
+      position:absolute;
+      right:18%;
+      top:30px;
+      font-size:100px;
+      color:rgba(255,255,255,.08);
+      line-height:1;
     }
     .eyebrow{
       display:inline-block;
@@ -70,6 +92,7 @@
       transition:.2s ease;
       border:1px solid transparent;
       cursor:pointer;
+      font-family:inherit;
     }
     .btn.primary{background:#fff;color:#1b4332;}
     .btn.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.20);}
@@ -138,11 +161,15 @@
     }
     .note strong{color:var(--green);}
     .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;}
-    @media (max-width:900px){.grid,.summary,.gallery{grid-template-columns:1fr;}}
+    @media (max-width:900px){.grid,.summary,.gallery{grid-template-columns:1fr;}
+      .hero:before{font-size:100px; right:10px; bottom:10px;}
+      .hero:after{font-size:60px; right:10%; top:15px;}
+    }
     @media print{
       body{background:#fff}
       .hero,.section{box-shadow:none}
       .btn,.nav{display:none !important}
+      .hero:before, .hero:after{display:none;}
     }
   </style>
 </head>
