@@ -6,22 +6,19 @@
   <title>Практическая работа: учебная экосистема</title>
   <style>
     :root{
-      --bg:#f4f7fc; --card:#ffffff; --text:#18212f; --muted:#5f6b7a; --line:#dde6f0;
-      --primary:#2457d6; --primary2:#4f86ff; --soft:#ecf3ff; --green:#0f766e;
-      --shadow:0 14px 36px rgba(24,33,47,.10); --radius:22px;
+      --bg:#fdfaf3; --card:#ffffff; --text:#1e2d1e; --muted:#5a6b5a; --line:#d4e0cf;
+      --primary:#2d6a4f; --primary2:#40916c; --soft:#e8f5e9; --green:#2d6a4f;
+      --shadow:0 14px 36px rgba(30,45,30,.08); --radius:22px;
     }
     *{box-sizing:border-box}
     body{
       margin:0; font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text);
-      background:
-        radial-gradient(circle at top right, rgba(79,134,255,.18), transparent 30%),
-        radial-gradient(circle at left center, rgba(36,87,214,.10), transparent 28%),
-        linear-gradient(180deg,#f7faff 0%, #f2f5fb 100%);
+      background:#fdfaf3;
       line-height:1.58;
     }
     .wrap{max-width:1120px; margin:0 auto; padding:28px 18px 56px;}
     .hero{
-      background:linear-gradient(135deg,#1f4ec9 0%, #3a76ff 100%);
+      background:linear-gradient(135deg,#1b4332 0%, #2d6a4f 50%, #40916c 100%);
       color:#fff; border-radius:30px; padding:30px 28px; box-shadow:var(--shadow);
       position:relative; overflow:hidden;
     }
@@ -42,18 +39,18 @@
     .hero p{margin:14px 0 0; max-width:780px; font-size:17px; opacity:.98;}
     .section{
       margin-top:18px; background:var(--card); border-radius:var(--radius);
-      box-shadow:var(--shadow); border:1px solid #edf2f8; padding:24px 22px;
+      box-shadow:var(--shadow); border:1px solid #e6efe4; padding:24px 22px;
     }
-    .section h2{margin:0 0 10px; font-size:26px; line-height:1.15;}
+    .section h2{margin:0 0 10px; font-size:26px; line-height:1.15; color:#1b4332;}
     .lead{margin:0 0 14px; color:var(--muted); font-size:16px;}
     .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
     .card{
-      border:1px solid var(--line); border-radius:20px; padding:18px 18px 16px; background:#fff;
+      border:1px solid var(--line); border-radius:20px; padding:18px 18px 16px; background:#f9fcf8;
     }
-    .card h3{margin:0 0 8px; font-size:20px;}
+    .card h3{margin:0 0 8px; font-size:20px; color:#2d6a4f;}
     .card p{margin:0 0 14px; color:var(--muted);}
     .pill{
-      display:inline-block; background:#eef4ff; color:#2457d6; padding:6px 10px;
+      display:inline-block; background:#e8f5e9; color:#2d6a4f; padding:6px 10px;
       border-radius:999px; font-size:13px; font-weight:700; margin-bottom:10px;
     }
     .btns{display:flex; gap:10px; flex-wrap:wrap;}
@@ -62,20 +59,25 @@
       padding:11px 16px; border-radius:14px; font-weight:700; transition:.2s ease;
       border:1px solid transparent;
     }
-    .btn.primary{background:linear-gradient(135deg,#2457d6 0%, #4f86ff 100%); color:#fff; box-shadow:0 10px 24px rgba(36,87,214,.20);}
-    .btn.secondary{background:#fff; color:var(--primary); border-color:#cfddfb;}
+    .btn.primary{
+      background:linear-gradient(135deg,#2d6a4f 0%, #40916c 100%); 
+      color:#fff; 
+      box-shadow:0 10px 24px rgba(45,106,79,.20);
+    }
+    .btn.secondary{background:#fff; color:var(--primary); border-color:#c8dac2;}
     .btn:hover{transform:translateY(-1px);}
     .steps{display:grid; gap:12px;}
     .step{
       display:grid; grid-template-columns:52px 1fr; gap:14px; align-items:flex-start;
       border:1px solid var(--line); border-radius:18px; padding:14px;
+      background:#f9fcf8;
     }
     .num{
       width:52px; height:52px; border-radius:16px; background:var(--soft); color:var(--primary);
       display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:800;
     }
     .note{
-      border-radius:18px; padding:16px 18px; border:1px solid #d6ebdf; background:#f1fcf6;
+      border-radius:18px; padding:16px 18px; border:1px solid #c8e6c9; background:#f1f8f1;
     }
     .note strong{color:var(--green);}
     .footer{margin-top:18px; text-align:center; color:var(--muted); font-size:14px;}
