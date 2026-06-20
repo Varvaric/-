@@ -43,7 +43,7 @@ body:not([data-theme]) {
     .hero{
       background:linear-gradient(135deg,#1b4332 0%, #2d6a4f 50%, #40916c 100%);
       color:#fff; border-radius:28px; padding:28px 26px; box-shadow:var(--shadow);
-      position:relative; overflow:hidden;
+      position:relative; overflow:visible;
     }
     .hero:before {
       content: "</>";
@@ -126,7 +126,7 @@ body:not([data-theme]) {
       .hero:before, .hero:after{display:none;}
     }
   .theme-toggle {
-  position: fixed; top: 16px; right: 16px; z-index: 999;
+  position: fixed; top: 16px; right: 16px; z-index: 99;
   background: var(--card); border: 1px solid var(--line);
   border-radius: 50%; width: 44px; height: 44px; font-size: 22px;
   cursor: pointer; display: flex; align-items: center; justify-content: center;
@@ -134,7 +134,7 @@ body:not([data-theme]) {
 }
 .theme-toggle:hover { transform: scale(1.1); }
   .scroll-top {
-  position: fixed; bottom: 26px; right: 24px; z-index: 998;
+  position: fixed; bottom: 26px; right: 24px; z-index: 98;
   width: 60px; height: 60px; border-radius: 50%;
   background: var(--primary); color: #fff; border: none;
   font-size: 30px; cursor: pointer;
