@@ -174,7 +174,21 @@
       .section{break-inside:avoid}
       .hero:before, .hero:after{display:none;}
     }
-    #photoList, #addPhotoBtn, #visualList, #addVisualBtn { display: none !important; }
+        #photoList, #addPhotoBtn, #visualList, #addVisualBtn { display: none !important; }
+    
+    /* Анимация вращения для диагональной сетки */
+    @keyframes slowRotate {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(3deg); }
+    }
+
+    .hero:before {
+      animation: slowRotate 8s linear infinite;
+    }
+
+    .hero:after {
+      animation: slowRotate 6s linear infinite reverse;
+    }
   </style>
 </head>
 <body>
