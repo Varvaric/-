@@ -34,7 +34,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: 'Nunito', Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family:'Nunito',Inter,"Segoe UI",Roboto,Arial,sans-serif;
       color:var(--text);
       background: #fdfaf3;
       line-height:1.58;
@@ -49,23 +49,15 @@
       position:relative;
       overflow:hidden;
     }
-    .hero:before{
-      content:"♥";
-      position:absolute;
-      right:30px;
-      bottom:20px;
-      font-size:180px;
-      color:rgba(255,255,255,.10);
-      line-height:1;
+    .hero .hearts-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
     }
-    .hero:after{
-      content:"♥";
-      position:absolute;
-      right:18%;
-      top:30px;
-      font-size:100px;
-      color:rgba(255,255,255,.08);
-      line-height:1;
+    .hero .hearts-layer span {
+      position: absolute;
+      line-height: 1;
     }
     .eyebrow{
       display:inline-block;
@@ -77,10 +69,12 @@
       font-weight:700;
       letter-spacing:.02em;
       margin-bottom:14px;
+      position:relative;
+      z-index:1;
     }
-    h1{margin:0;font-size:clamp(28px,4vw,42px);line-height:1.08;}
-    .hero p{margin:14px 0 0;max-width:860px;font-size:17px;opacity:.98;}
-    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+    h1{margin:0;font-size:clamp(28px,4vw,42px);line-height:1.08;position:relative;z-index:1;}
+    .hero p{margin:14px 0 0;max-width:860px;font-size:17px;opacity:.98;position:relative;z-index:1;}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;position:relative;z-index:1;}
     .btn{
       text-decoration:none;
       display:inline-flex;
@@ -161,32 +155,39 @@
     }
     .note strong{color:var(--green);}
     .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;}
-    @media (max-width:900px){.grid,.summary,.gallery{grid-template-columns:1fr;}
-      .hero:before{font-size:100px; right:10px; bottom:10px;}
-      .hero:after{font-size:60px; right:10%; top:15px;}
+    @media (max-width:900px){
+      .grid,.summary,.gallery{grid-template-columns:1fr;}
+      .hero .hearts-layer span:nth-child(1){font-size:100px !important; right:5px !important; bottom:5px !important;}
+      .hero .hearts-layer span:nth-child(2){font-size:55px !important; right:10% !important; top:10px !important;}
+      .hero .hearts-layer span:nth-child(3){font-size:65px !important; left:5px !important; bottom:-20px !important;}
+      .hero .hearts-layer span:nth-child(4){font-size:40px !important; left:40% !important; top:-10px !important;}
+      .hero .hearts-layer span:nth-child(5){font-size:45px !important; right:40% !important; bottom:-15px !important;}
     }
     @media print{
       body{background:#fff}
       .hero,.section{box-shadow:none}
       .btn,.nav{display:none !important}
-      .hero:before, .hero:after{display:none;}
+      .hero .hearts-layer{display:none;}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="eyebrow">Шаблон отчёта</div>
-      <h1>Аудит рабочего пространства и проект улучшения</h1>
-      <p>Заполните поля ниже, перенесите результаты из чек-листа и оформите собственную итоговую страницу.</p>
-      <div class="nav">
-        <a class="btn primary" href="student_checklist_interactive.html">Вернуться к чек-листу</a>
-        <a class="btn secondary" href="student_html_guide.html">Инструкция по HTML и ИИ</a>
-        <a class="btn secondary" href="student_infrastructure_project.html">Проект оборудования</a>
-        <a class="btn secondary" href="student_publish_site_guide.html">Публикация сайта</a>
-        <button class="btn secondary" onclick="window.print()">Сохранить как PDF / печать</button>
-      </div>
-    </section>
+  <div class="hearts-layer">
+    <span style="right:30px; bottom:20px; font-size:180px; color:rgba(255,255,255,.10);">♥</span>
+    <span style="right:18%; top:30px; font-size:100px; color:rgba(255,255,255,.08);">♥</span>
+    <span style="left:30px; bottom:-40px; font-size:130px; color:rgba(255,255,255,.06);">♥</span>
+    <span style="left:55%; top:-35px; font-size:85px; color:rgba(255,255,255,.06);">♥</span>
+    <span style="right:42%; bottom:-35px; font-size:95px; color:rgba(255,255,255,.05);">♥</span>
+  </div>
+  <div class="eyebrow">Шаблон отчёта</div>
+  <h1>Аудит рабочего пространства и проект улучшения</h1>
+  <p>Заполните поля ниже, перенесите результаты из чек-листа и оформите собственную итоговую страницу.</p>
+  <div class="nav">
+    ...
+  </div>
+</section>
 
     <section class="section">
       <h2>1. Общая информация</h2>
