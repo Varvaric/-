@@ -83,7 +83,28 @@
     }
     .note strong{color:var(--green);}
     .footer{margin-top:18px; text-align:center; color:var(--muted); font-size:14px;}
-    @media (max-width:900px){ .grid{grid-template-columns:1fr;} }
+        @media (max-width:900px){ .grid{grid-template-columns:1fr;} }
+    
+    /* Анимация для иконок в hero */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30% { transform: translateY(-12px) rotate(2deg); }
+      60% { transform: translateY(-5px) rotate(-1deg); }
+    }
+
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30% { transform: translateY(-8px) rotate(-2deg); }
+      60% { transform: translateY(-3px) rotate(1deg); }
+    }
+
+    .hero:before {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .hero:after {
+      animation: floatReverse 4s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
