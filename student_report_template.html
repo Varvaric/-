@@ -34,9 +34,7 @@
       font-weight: 700;
     }
     .band.good {
-      background: #d8f3dc;
-      color: #1b4332;
-      border: 1px solid #95d5b2;
+      background: var(--soft); color: var(--primary); border: 1px solid var(--primary);
     }
     *{box-sizing:border-box}
     body{
@@ -95,26 +93,26 @@
       cursor:pointer;
       font-family:inherit;
     }
-    .btn.primary{background:#fff;color:#1b4332;}
+    .btn.primary{background:var(--card); color:var(--primary);}
     .btn.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.20);}
     .section{
       margin-top:18px;
       background:var(--card);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      border:1px solid #e6efe4;
+      border:1px solid var(--line);
       padding:24px 22px;
     }
-    .section h2{margin:0 0 10px;font-size:26px;line-height:1.15;color:#1b4332;}
+    .section h2{margin:0 0 10px;font-size:26px;line-height:1.15;color:var(--primary);}
     .lead{margin:0 0 14px;color:var(--muted);font-size:16px;}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
     .card{
       border:1px solid var(--line);
       border-radius:18px;
       padding:16px;
-      background:#f9fcf8;
+      background:var(--card);
     }
-    .card h3{margin:0 0 8px;font-size:19px;color:#2d6a4f;}
+    .card h3{margin:0 0 8px;font-size:19px;color:var(--primary);}
     .field, textarea, input[type="text"]{
       width:100%;
       border:1px solid var(--line);
@@ -122,13 +120,13 @@
       padding:12px 14px;
       font:inherit;
       color:var(--text);
-      background:#fff;
+      background:var(--card);
     }
     textarea{min-height:120px;resize:vertical;}
     .small{min-height:90px;}
     .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
     .sum-card{
-      background:#f9fcf8;
+      background:var(--card);
       border:1px solid var(--line);
       border-radius:18px;
       padding:16px;
@@ -143,7 +141,7 @@
     }
     .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
     .ph{
-      border:2px dashed #c8dac2;
+      border:2px dashed var(--line);
       border-radius:18px;
       min-height:220px;
       display:flex;
@@ -152,13 +150,12 @@
       color:var(--muted);
       text-align:center;
       padding:20px;
-      background:#f9fcf8;
+      background:var(--card);
     }
     .note{
       border-radius:18px;
       padding:16px 18px;
-      border:1px solid #c8e6c9;
-      background:#f1f8f1;
+      border:1px solid var(--line); background:var(--soft);
     }
     .note strong{color:var(--green);}
     .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;}
