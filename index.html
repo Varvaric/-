@@ -54,26 +54,27 @@
     .section h2{margin:0 0 10px; font-size:26px; line-height:1.15; color:var(--primary);}
     .lead{margin:0 0 14px; color:var(--muted); font-size:16px;}
     .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
-    .card{
-      border:1px solid var(--line); border-radius:20px; padding:18px 18px 16px; background:var(--card);
-    }
-    .card h3{margin:0 0 8px; font-size:20px; color:var(--primary);}
-    .card p{margin:0 0 14px; color:var(--muted);}
-    .pill{
-      display:inline-block; background:var(--soft); color:var(--primary); padding:6px 10px;
-      border-radius:999px; font-size:13px; font-weight:700; margin-bottom:10px;
-    }
-    .btns{display:flex; gap:10px; flex-wrap:wrap;}
-    .btn{
-      text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 16px; border-radius:14px; font-weight:700; transition:.2s ease;
-      border:1px solid transparent; font-family:inherit;
-    }
-    .btn.primary{
-      background:linear-gradient(135deg,#2d6a4f 0%, #40916c 100%); 
-      color:#fff; 
-      box-shadow:0 10px 24px rgba(45,106,79,.20);
-    }
+   .card{
+  border:1px solid var(--line); border-radius:20px; padding:18px 18px 16px; background:var(--card);
+  display:flex; flex-direction:column;
+}
+.card h3{margin:0 0 8px; font-size:20px; color:var(--primary);}
+.card p{margin:0 0 14px; color:var(--muted); flex-grow:1;}
+.pill{
+  display:inline-block; background:var(--soft); color:var(--primary); padding:6px 10px;
+  border-radius:999px; font-size:13px; font-weight:700; margin-bottom:10px;
+}
+.btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:auto;}
+.btn{
+  text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 16px; border-radius:14px; font-weight:700; transition:.2s ease;
+  border:1px solid transparent; font-family:inherit;
+}
+.btn.primary{
+  background:linear-gradient(135deg,#2d6a4f 0%, #40916c 100%); 
+  color:#fff; 
+  box-shadow:0 10px 24px rgba(45,106,79,.20);
+}
     .btn.secondary{background:var(--card); color:var(--primary); border-color:var(--line);}
     .btn:hover{transform:translateY(-1px);}
     .steps{display:grid; gap:12px;}
@@ -194,15 +195,6 @@
             <a class="btn primary" href="student_infrastructure_project.html">Открыть проектное задание</a>
           </div>
         </div>
-         <div class="card">
-    <span class="pill">Задача</span>
-    <h3>Что должно получиться</h3>
-    <p>На выходе у вас будет осмысленный аудит рабочего пространства, собственная цифровая страница и проект улучшения, который можно защитить и опубликовать.</p>
-    <div class="btns">
-      <a class="btn primary" href="student_report_template.html"> Личный аудит </a>
-      <a class="btn primary" href="student_infrastructure_project.html"> Проект аудитории </a>
-    </div>
-  </div>
       
         <div class="card">
           <span class="pill">Публикация</span>
