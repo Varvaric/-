@@ -562,8 +562,7 @@ function renderTeam(){
     row.innerHTML = `
       <div class="row-head">
         <div class="row-title">Участник ${index + 1}</div>
-        <button class="btn danger remove-btn" type="button" data-remove-team="${index}">Удалить</button>
-      </div>
+         </div>
       <div class="mini-grid">
         <div><label class="caption">ФИО</label><input class="field" data-team="${index}" data-field="name" type="text" value="${escapeHtml(member.name)}" placeholder="Фамилия Имя" /></div>
         <div><label class="caption">Роль в проекте</label><input class="field" data-team="${index}" data-field="role" type="text" value="${escapeHtml(member.role)}" placeholder="Аудит, смета, дизайн, HTML" /></div>
@@ -588,7 +587,6 @@ function renderEquipment(){
     row.innerHTML = `
       <div class="row-head">
         <div class="row-title">Позиция закупки ${index + 1}</div>
-        <button class="btn danger remove-btn" type="button" data-remove-equipment="${index}">Удалить</button>
       </div>
       <div class="mini-grid">
         <div><label class="caption">Оборудование</label><input class="field" data-equipment="${index}" data-field="name" type="text" value="${escapeHtml(item.name)}" placeholder="Монитор, кресло, SSD, ИБП" /></div>
