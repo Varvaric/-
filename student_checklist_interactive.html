@@ -505,10 +505,8 @@
       </div>
 
       <div class="actions">
-        <button class="btn primary" id="saveBtn" type="button" style="background:linear-gradient(135deg,#2d6a4f 0%, #40916c 100%); color:#fff;">Сохранить результаты</button>
-        <a class="btn primary" href="student_report_template.html"> Личный аудит </a>
-        <a class="btn secondary" href="student_report_template.html" id="toReport">Перейти к шаблону отчёта</a>
-      </div>
+  <button class="btn primary" id="saveBtn" type="button" style="background:linear-gradient(135deg,#2d6a4f 0%, #40916c 100%); color:#fff;">💾 Сохранить и перейти к отчёту</button>
+</div>
     </section>
   </div>
 
@@ -567,7 +565,40 @@ document.addEventListener('change', (e) => {
 });
 document.getElementById('saveBtn').addEventListener('click', () => {
   saveAll();
-  alert('Результаты сохранены. Можно переходить к шаблону отчёта.');
+  
+  const modal = document.createElement('div');
+  modal.style.cssText = `
+    position:fixed; inset:0; background:rgba(0,0,0,.4); 
+    display:flex; align-items:center; justify-content:center; 
+    z-index:9999;
+  `;
+  
+  modal.innerHTML = `
+    <div style="
+      background:#fff; border-radius:20px; padding:28px 24px;
+      max-width:400px; text-align:center; box-shadow:0 14px 36px rgba(0,0,0,.15);
+      font-family:'Nunito',sans-serif;
+    ">
+      <div style="font-size:48px; margin-bottom:12px;">✅</div>
+      <h3 style="margin:0 0 8px; color:#1b4332;">Результаты сохранены!</h3>
+      <p style="color:#5a6b5a; margin:0 0 20px;">Данные чек-листа перенесены в отчёт.</p>
+      <button id="goToReport" style="
+        background:linear-gradient(135deg,#2d6a4f,#40916c);
+        color:#fff; border:none; padding:12px 24px; border-radius:14px;
+        font-weight:700; font-size:16px; cursor:pointer; font-family:inherit;
+      ">📋 Перейти к шаблону</button>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  
+  document.getElementById('goToReport').addEventListener('click', () => {
+    window.location.href = 'student_report_template.html';
+  });
+  
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) modal.remove();
+  });
 });
 ['strengths','problems','improvements'].forEach(id => {
   document.getElementById(id).addEventListener('input', saveAll);
