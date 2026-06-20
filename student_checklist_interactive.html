@@ -104,8 +104,29 @@
       .hero:before{font-size:100px; right:10px; bottom:10px;}
       .hero:after{font-size:60px; right:10%; top:15px;}
     }
-    @media print{
+        @media print{
       .hero:before, .hero:after{display:none;}
+    }
+    
+    /* Анимация для иконок в hero */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30% { transform: translateY(-12px) rotate(2deg); }
+      60% { transform: translateY(-5px) rotate(-1deg); }
+    }
+
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      30% { transform: translateY(-8px) rotate(-2deg); }
+      60% { transform: translateY(-3px) rotate(1deg); }
+    }
+
+    .hero:before {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .hero:after {
+      animation: floatReverse 4s ease-in-out infinite;
     }
   </style>
 </head>
