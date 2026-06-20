@@ -147,7 +147,7 @@
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="themeToggle" title="Переключить тему">☼</button>
+  <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌓</button>
   <div class="wrap">
     <section class="hero">
       <div class="eyebrow">Интерактивный чек-лист</div>
@@ -648,12 +648,12 @@ const tt = document.getElementById('themeToggle');
 const h = document.documentElement;
 const st = localStorage.getItem('theme') || 'light';
 h.setAttribute('data-theme', st);
-tt.textContent = st === 'dark' ? '☽' : '☼';
+tt.textContent = st === 'dark' ? '🌙' : '☀️';
 tt.addEventListener('click', () => {
   const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   h.setAttribute('data-theme', n);
   localStorage.setItem('theme', n);
-  tt.textContent = n === 'dark' ? '☽' : '☼';
+  tt.textContent = n === 'dark' ? '🌙' : '☀️';
 });
 </script>
 
