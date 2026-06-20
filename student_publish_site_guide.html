@@ -7,15 +7,22 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
     
-    :root{
-      --bg:#fdfaf3; --card:#ffffff; --text:#1e2d1e; --muted:#5a6b5a; --line:#d4e0cf;
-      --primary:#2d6a4f; --primary2:#40916c; --soft:#e8f5e9; --green:#2d6a4f; --warn:#9a6700;
-      --shadow:0 14px 36px rgba(30,45,30,.08); --radius:22px;
-    }
+    :root,
+[data-theme="light"]{
+  --bg:#fdfaf3; --card:#ffffff; --text:#1e2d1e; --muted:#5a6b5a; --line:#d4e0cf;
+  --primary:#2d6a4f; --primary2:#40916c; --soft:#e8f5e9; --green:#2d6a4f; --warn:#9a6700;
+  --shadow:0 14px 36px rgba(30,45,30,.08); --radius:22px;
+}
+
+[data-theme="dark"]{
+  --bg:#0f1a14; --card:#152418; --text:#e8f5e9; --muted:#95b89e; --line:#2a3d2e;
+  --primary:#6ee7b7; --primary2:#34d399; --soft:#1a2e1f; --green:#6ee7b7; --warn:#fbbf24;
+  --shadow:0 14px 36px rgba(0,0,0,.30);
+}
     *{box-sizing:border-box}
     body{
       margin:0; font-family:'Nunito',Inter,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text);
-      background:#fdfaf3; line-height:1.58;
+      background:var(--bg);
     }
     .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 56px;}
     .hero{
@@ -100,9 +107,18 @@
     @media print{
       .hero:before, .hero:after{display:none;}
     }
+    .theme-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 999;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 50%; width: 44px; height: 44px; font-size: 22px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); transition: .2s ease;
+}
+.theme-toggle:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" id="themeToggle" title="Переключить тему">☀️</button>
   <div class="wrap">
     <section class="hero">
       <div class="eyebrow">Публикация сайта</div>
@@ -218,5 +234,18 @@ images/
 
     <div class="footer">Если всё сделано правильно, у вас будет не просто файл, а настоящий опубликованный мини-сайт.</div>
   </div>
+  <script>
+const tt = document.getElementById('themeToggle');
+const h = document.documentElement;
+const st = localStorage.getItem('theme') || 'light';
+h.setAttribute('data-theme', st);
+tt.textContent = st === 'dark' ? '🌙' : '☀️';
+tt.addEventListener('click', () => {
+  const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  h.setAttribute('data-theme', n);
+  localStorage.setItem('theme', n);
+  tt.textContent = n === 'dark' ? '🌙' : '☀️';
+});
+</script>
 </body>
 </html>
