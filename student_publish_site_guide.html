@@ -61,18 +61,18 @@
       padding:11px 16px; border-radius:14px; font-weight:700; transition:.2s ease;
       border:1px solid transparent; font-family:inherit;
     }
-    .btn.primary{background:#fff; color:#1b4332;}
+    .btn.primary{background:var(--card); color:var(--primary);}
     .btn.secondary{background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.20);}
     .section{
       margin-top:18px; background:var(--card); border-radius:var(--radius);
-      box-shadow:var(--shadow); border:1px solid #e6efe4; padding:24px 22px;
+      box-shadow:var(--shadow); border:1px solid var(--line); padding:24px 22px;
     }
-    .section h2{margin:0 0 10px; font-size:26px; line-height:1.15; color:#1b4332;}
+    .section h2{margin:0 0 10px; font-size:26px; line-height:1.15; color:var(--primary);}
     .lead{margin:0 0 14px; color:var(--muted); font-size:16px;}
     .steps{display:grid; gap:12px;}
     .step{
       display:grid; grid-template-columns:52px 1fr; gap:14px; align-items:flex-start;
-      border:1px solid var(--line); border-radius:18px; padding:14px; background:#f9fcf8;
+      border:1px solid var(--line); border-radius:18px; padding:14px; background:var(--card);
     }
     .num{
       width:52px; height:52px; border-radius:16px; background:var(--soft); color:var(--primary);
@@ -80,16 +80,16 @@
     }
     .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
     .card{
-      border:1px solid var(--line); border-radius:18px; padding:16px; background:#f9fcf8;
+      border:1px solid var(--line); border-radius:18px; padding:16px; background:var(--card);
     }
-    .card h3{margin:0 0 8px; font-size:19px; color:#2d6a4f;}
+    .card h3{margin:0 0 8px; font-size:19px; color:var(--primary);}
     .card p{margin:0; color:var(--muted);}
     .note{
-      border-radius:18px; padding:16px 18px; border:1px solid #c8e6c9; background:#f1f8f1;
+      border-radius:18px; padding:16px 18px; border:1px solid var(--line); background:var(--soft);
     }
     .note strong{color:var(--green);}
     .warn{
-      border-radius:18px; padding:16px 18px; border:1px solid #f3dfb3; background:#fff9eb;
+      border-radius:18px; padding:16px 18px; border:1px solid var(--line); background:var(--card);
     }
     .warn strong{color:var(--warn);}
     pre{
