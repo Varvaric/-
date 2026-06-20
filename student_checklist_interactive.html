@@ -168,6 +168,17 @@
     opacity: 0;
   }
 }
+    .scroll-top {
+  position: fixed; bottom: 24px; right: 24px; z-index: 998;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary); color: #fff; border: none;
+  font-size: 20px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow); opacity: 0; visibility: hidden;
+  transition: .3s ease; transform: translateY(10px);
+}
+.scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
@@ -688,6 +699,7 @@ document.getElementById('saveBtn').addEventListener('click', () => {
 });;
 updateSummary();
 </script>
+  <button class="scroll-top" id="scrollTop" title="Наверх">⬆</button>
 <script>
 const tt = document.getElementById('themeToggle');
 const h = document.documentElement;
@@ -701,5 +713,14 @@ tt.addEventListener('click', () => {
   tt.textContent = n === 'dark' ? '🌙' : '☀️';
 });
 </script>
-
-</body></html>
+<script>
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollBtn.classList.toggle('visible', window.scrollY > 300);
+});
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
