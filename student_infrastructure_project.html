@@ -84,7 +84,7 @@
       box-shadow:0 10px 24px rgba(45,106,79,.18);
     }
     .btn.light{background:var(--card); color:var(--primary); border-color:#c8dac2;}
-    .btn.warn{background:#fff9eb; color:#7a4a00; border-color:#f3dfb3;}
+    .btn.warn{background:var(--card); color:var(--warn); border:1px solid var(--line);}
     .btn.danger{background:var(--card); color:var(--bad); border-color:#fecaca;}
     .btn:hover{transform:translateY(-1px);}
     .section{
@@ -103,7 +103,7 @@
     }
     .note strong{color:var(--green);}
     .warn-box{
-      border-radius:18px; padding:16px 18px; border:1px solid #f3dfb3; background:#fff9eb;
+  border-radius:18px; padding:16px 18px; border:1px solid var(--line); background:var(--card);
     }
     .warn-box strong{color:var(--warn);}
     .field, textarea, select{
@@ -154,8 +154,8 @@
     .sum-card strong{display:block; font-size:14px; color:var(--muted);}
     .big{font-size:34px; font-weight:800; color:var(--primary); line-height:1; margin-top:8px;}
     .pill{
-      display:inline-block; background:#e8f5e9; color:(--primary); padding:6px 10px;
-      border-radius:999px; font-size:13px; font-weight:700; margin:0 8px 8px 0;
+  display:inline-block; background:var(--soft); color:var(--primary); padding:6px 10px;
+  border-radius:999px; font-size:13px; font-weight:700; margin:0 8px 8px 0;
     }
     .steps{display:grid; gap:12px;}
     .step{
